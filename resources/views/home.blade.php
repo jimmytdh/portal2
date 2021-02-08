@@ -24,7 +24,7 @@
     <link href="{{ url('/') }}/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ url('/') }}/vendor/icofont/icofont.min.css" rel="stylesheet">
     <link href="{{ url('/') }}/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="{{ url('/') }}/vendor/owl.carousel/{{ url('/') }}/owl.carousel.min.css" rel="stylesheet">
+    <link href="{{ url('/') }}/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="{{ url('/') }}/vendor/venobox/venobox.css" rel="stylesheet">
     <link href="{{ url('/') }}/vendor/aos/aos.css" rel="stylesheet">
 
