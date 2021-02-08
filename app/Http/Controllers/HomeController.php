@@ -48,9 +48,9 @@ class HomeController extends Controller
     function save(Request $req)
     {
         $data = array(
-            'fname' => strtoupper($req->fname),
-            'mname' => strtoupper($req->mname),
-            'lname' => strtoupper($req->lname),
+            'fname' => ucwords(strtolower($req->fname)),
+            'mname' => ucwords(strtolower($req->mname)),
+            'lname' => ucwords(strtolower($req->lname)),
             'designation' => $req->designation,
             'division' => $req->division,
             'section' => $req->section,
@@ -59,7 +59,6 @@ class HomeController extends Controller
             'user_priv' => 0,
             'status' => 1,
         );
-
         $check = User::where('username',$req->username)->first();
 
         if($check)
