@@ -153,7 +153,7 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch item" data-url="http://covid19.cebusouthmed.online/" data-aos="zoom-in" data-aos-delay="100">
                     <div class="icon-box iconbox-blue">
                         <div class="icon">
                             <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
@@ -166,7 +166,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0 item" data-url="{{ $url  }}/utz" data-aos="zoom-in" data-aos-delay="200">
                     <div class="icon-box iconbox-orange ">
                         <div class="icon">
                             <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
@@ -179,7 +179,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0 item" data-url="http://192.168.5.230" data-aos="zoom-in" data-aos-delay="300">
                     <div class="icon-box iconbox-pink">
                         <div class="icon">
                             <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
@@ -187,7 +187,7 @@
                             </svg>
                             <i class="bx bx-book"></i>
                         </div>
-                        <h4><a href="">Electronic Statement of Account</a></h4>
+                        <h4><a href="http://192.168.5.230">Electronic Statement of Account</a></h4>
                         <p>Electronic Statement of Account or eSOA automates the manual process of generating SOA to the patients.</p>
                     </div>
                 </div>
@@ -243,7 +243,7 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch item" data-url="{{ $url  }}/dts" data-aos="zoom-in" data-aos-delay="100">
                     <div class="icon-box iconbox-blue">
                         <div class="icon">
                             <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
@@ -256,7 +256,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0 item" data-url="http://srs.cebusouthmed.online/" data-aos="zoom-in" data-aos-delay="200">
                     <div class="icon-box iconbox-orange ">
                         <div class="icon">
                             <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
@@ -484,7 +484,14 @@
 
 <!-- Template Main JS File -->
 <script src="{{ url('/') }}/js/main.js"></script>
-
+<script>
+    $(document).ready(function () {
+        $('.item').on('click',function(){
+            var url = $(this).data('url');
+            window.location.href = url;
+        });
+    });
+</script>
 </body>
 
 </html>

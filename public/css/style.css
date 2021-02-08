@@ -1649,3 +1649,21 @@ section {
   color: #fff;
   text-decoration: none;
 }
+
+.item {
+  cursor: pointer;
+}
+.item:hover {
+  animation: zoominoutsinglefeatured 1s infinite ;
+}
+@keyframes zoominoutsinglefeatured {
+  0% {
+    transform: scale(1,1);
+  }
+  50% {
+    transform: scale(1.05,1.05);
+  }
+  100% {
+    transform: scale(1,1);
+  }
+}
