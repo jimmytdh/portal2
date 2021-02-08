@@ -61,7 +61,7 @@
                     </ul>
                 </nav><!-- .nav-menu -->
 
-                <a href="#about" class="get-started-btn scrollto">Register</a>
+                <a href="{{ url('register') }}" class="get-started-btn scrollto">Register</a>
             </div>
         </div>
 
@@ -76,7 +76,7 @@
             <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
                 <h1>Cebu South Medical Center Information Systems Portal</h1>
                 <h2>Turn raw data into useful information that can provide the correct knowledge for decision making within an organisation</h2>
-                <div><a href="#about" class="btn-get-started scrollto">Register</a></div>
+                <div><a href="{{ url('register') }}" class="btn-get-started scrollto">Register</a></div>
             </div>
             <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
                 <img src="{{ url('/') }}/img/hero-img.png" class="img-fluid animated" alt="">
