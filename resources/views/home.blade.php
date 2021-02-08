@@ -120,22 +120,22 @@
             <div class="row counters">
 
                 <div class="col-lg-3 col-6 text-center">
-                    <span data-toggle="counter-up">232</span>
+                    <span data-toggle="counter-up">{{ $user }}</span>
                     <p>Users</p>
                 </div>
 
                 <div class="col-lg-3 col-6 text-center">
-                    <span data-toggle="counter-up">3</span>
+                    <span data-toggle="counter-up">{{ $system }}</span>
                     <p>Systems</p>
                 </div>
 
                 <div class="col-lg-3 col-6 text-center">
-                    <span data-toggle="counter-up">12</span>
+                    <span data-toggle="counter-up">{{ $section }}</span>
                     <p>Sections</p>
                 </div>
 
                 <div class="col-lg-3 col-6 text-center">
-                    <span data-toggle="counter-up">4</span>
+                    <span data-toggle="counter-up">{{ $division }}</span>
                     <p>Divisions</p>
                 </div>
 
