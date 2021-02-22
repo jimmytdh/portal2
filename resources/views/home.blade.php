@@ -257,7 +257,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0 item" data-url="http://srs.cebusouthmed.online/" data-aos="zoom-in" data-aos-delay="200">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0 item" data-url="{{ $url  }}/srs" data-aos="zoom-in" data-aos-delay="200">
                     <div class="icon-box iconbox-orange ">
                         <div class="icon">
                             <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
@@ -265,7 +265,7 @@
                             </svg>
                             <i class="bx bx-wrench"></i>
                         </div>
-                        <h4><a href="http://srs.cebusouthmed.online/">Service Request System</a></h4>
+                        <h4><a href="{{ $url  }}/srs">Service Request System</a></h4>
                         <p>Service Request System allow users to request or borrow equipments from IT Office.</p>
                     </div>
                 </div>
