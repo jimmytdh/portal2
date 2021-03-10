@@ -153,7 +153,7 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-4 col-md-6 d-flex align-items-stretch item" data-url="http://covid19.cebusouthmed.online/" data-aos="zoom-in" data-aos-delay="100">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch item" data-url="{{ $url  }}/covid19" data-aos="zoom-in" data-aos-delay="100">
                     <div class="icon-box iconbox-blue">
                         <div class="icon">
                             <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
@@ -161,7 +161,7 @@
                             </svg>
                             <i class="bx bxs-virus"></i>
                         </div>
-                        <h4><a href="http://covid19.cebusouthmed.online/">COVID-19 Monitoring System</a></h4>
+                        <h4><a href="{{ $url  }}/covid19">COVID-19 Monitoring System</a></h4>
                         <p>A web-based monitoring system that will record patients basic information, disposition, symptoms related to COVID-19.</p>
                     </div>
                 </div>
