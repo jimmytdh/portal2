@@ -47,9 +47,11 @@ class HomeController extends Controller
 
     function save(Request $req)
     {
-        $data = array(
+        $match = array(
             'fname' => ucwords(strtolower($req->fname)),
             'mname' => ucwords(strtolower($req->mname)),
+        );
+        $data = array(
             'lname' => ucwords(strtolower($req->lname)),
             'designation' => $req->designation,
             'division' => $req->division,
@@ -68,7 +70,7 @@ class HomeController extends Controller
                 'mname' => $req->mname,
                 'lname' => $req->lname
             ]);
-        User::create($data);
+        User::updateOrCreate($match,$data);
         return redirect('register')->with('status','saved');
     }
 }
