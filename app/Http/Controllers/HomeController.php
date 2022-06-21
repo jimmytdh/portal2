@@ -49,10 +49,10 @@ class HomeController extends Controller
     {
         $match = array(
             'fname' => ucwords(strtolower($req->fname)),
-            'mname' => ucwords(strtolower($req->mname)),
+            'lname' => ucwords(strtolower($req->lname)),
         );
         $data = array(
-            'lname' => ucwords(strtolower($req->lname)),
+            'mname' => ucwords(strtolower($req->mname)),
             'designation' => $req->designation,
             'division' => $req->division,
             'section' => $req->section,
@@ -61,8 +61,15 @@ class HomeController extends Controller
             'user_priv' => 0,
             'status' => 1,
         );
-        $check = User::where('username',$req->username)->first();
 
+        $user_id = 0;
+        $ifExist = User::where($match)->first();
+        if($ifExist){
+            $user_id = $ifExist->id;
+        }
+        $check = User::where('username',$req->username)
+            ->where('id','<>',$user_id)
+            ->first();
         if($check)
             return redirect('register')->with('duplicate',[
                 'username' => $req->username,
