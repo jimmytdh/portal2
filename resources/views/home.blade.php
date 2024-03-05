@@ -53,7 +53,7 @@
 
                 <nav class="nav-menu d-none d-lg-block">
                     <ul>
-                        <li class="active"><a href="index.html">Home</a></li>
+                        <li class="active"><a href="#hero">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#services">Information Systems</a></li>
                         <li><a href="#contact">Contact</a></li>
@@ -76,7 +76,6 @@
             <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
                 <h1>Cebu South Medical Center Information Systems Portal</h1>
                 <h2>Turn raw data into useful information that can provide the correct knowledge for decision making within an organisation</h2>
-                <div><a href="{{ url('register') }}" class="btn-get-started scrollto">Register</a></div>
             </div>
             <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
                 <img src="{{ url('/') }}/img/hero-img.png" class="img-fluid animated" alt="">
@@ -387,7 +386,7 @@
                     <div class="info-box  mb-4">
                         <i class="bx bx-envelope"></i>
                         <h3>Email Us</h3>
-                        <p>tmc.cebu.doh@gmail.com</p>
+                        <p>ihomp@csmc.doh.gov.ph</p>
                     </div>
                 </div>
 
@@ -395,7 +394,7 @@
                     <div class="info-box  mb-4">
                         <i class="bx bx-phone-call"></i>
                         <h3>Call Us</h3>
-                        <p>(032) 273-3226</p>
+                        <p>(032) 265-5986 loc. 104</p>
                     </div>
                 </div>
 
