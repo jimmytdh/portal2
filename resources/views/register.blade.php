@@ -3,6 +3,7 @@ $dup = array(
     'fname' => '',
     'mname' => '',
     'lname' => '',
+    'suffix' => '',
 );
 ?>
     <!DOCTYPE html>
@@ -33,6 +34,27 @@ $dup = array(
         .sub {
             font-weight: 500;
             font-size: 20px;
+        }
+        .form-control,.btn {
+            border-radius: 12px !important;
+        }
+        fieldset {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+
+        legend {
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 0 10px;
+            margin-top: -20px;
+            background: #fff;
+            width: auto;
+            color: #eb8e0b;
+            border: none !important;
+            margin-bottom: 0px !important;
         }
     </style>
 </head>
@@ -74,42 +96,55 @@ $dup = array(
                     Password: 123
                 </div>
                 -->
-                <div class="form-group">
-                    <input type="text" placeholder="First Name" class="form-control" name="fname" value="{{ $dup['fname'] }}" required>
-                </div>
-                <div class="form-group">
-                    <input type="text" placeholder="Middle Name" class="form-control" name="mname" value="{{ $dup['mname'] }}">
-                </div>
-                <div class="form-group">
-                    <input type="text" placeholder="Last Name" class="form-control" name="lname" required value="{{ $dup['lname'] }}">
-                </div>
-                <div class="form-group">
-                    <input type="text" placeholder="Username" class="form-control" name="username" required>
-                </div>
-                <div class="form-group">
-                    <input type="password" placeholder="Password" class="form-control" name="password" minlength="4" required>
-                </div>
-                <div class="form-group">
-                    <select name="designation" id="" class="form-control" required>
-                        <option value="">Select Designation...</option>
-                        @foreach($designation as $d)
-                            <option value="{{ $d->id }}">{{ $d->description }}</option>
-                        @endforeach
-                    </select>
-                </div>
-                <div class="form-group">
-                    <select name="division" id="division" class="form-control" required>
-                        <option value="">Select Division...</option>
-                        @foreach($division as $d)
-                            <option value="{{ $d->id }}">{{ $d->description }}</option>
-                        @endforeach
-                    </select>
-                </div>
-                <div class="form-group">
-                    <select name="section" id="section" class="form-control" required>
-                        <option value="">Select Section...</option>
-                    </select>
-                </div>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <div class="form-group">
+                        <input type="text" placeholder="First Name" class="form-control" name="fname" value="{{ $dup['fname'] }}" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Middle Name" class="form-control" name="mname" value="{{ $dup['mname'] }}">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Last Name" class="form-control" name="lname" required value="{{ $dup['lname'] }}">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Suffix" class="form-control" name="suffix" required value="{{ $dup['suffix'] }}">
+                    </div>
+                    <div class="form-group">
+                        <select name="designation" id="" class="form-control" required>
+                            <option value="">Select Designation...</option>
+                            @foreach($designation as $d)
+                                <option value="{{ $d->id }}">{{ $d->description }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select name="division" id="division" class="form-control" required>
+                            <option value="">Select Division...</option>
+                            @foreach($division as $d)
+                                <option value="{{ $d->id }}">{{ $d->description }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select name="section" id="section" class="form-control" required>
+                            <option value="">Select Section...</option>
+                        </select>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Login Credentials</legend>
+                    <div class="form-group">
+                        <input type="text" placeholder="Username" class="form-control" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Password" class="form-control" name="password" minlength="4" required>
+                    </div>
+                </fieldset>
+
+
+
+
 
                 <div class="row">
                     <div class="col-xs-12">

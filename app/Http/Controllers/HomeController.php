@@ -32,6 +32,7 @@ class HomeController extends Controller
 
     public function register()
     {
+        return redirect('/');
         $designation = Designation::orderBy('description','asc')->get();
         $division = Division::orderBy('description','asc')->get();
         return view('register',compact('designation','division'));
@@ -59,7 +60,7 @@ class HomeController extends Controller
             'username' => $req->username,
             'password' => bcrypt($req->password),
             'user_priv' => 0,
-            'status' => 1,
+            'status' => 0,
         );
 
         $user_id = 0;

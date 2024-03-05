@@ -61,7 +61,7 @@
                     </ul>
                 </nav><!-- .nav-menu -->
 
-                <a href="{{ url('register') }}" class="get-started-btn scrollto">Register</a>
+{{--                <a href="{{ url('register') }}" class="get-started-btn scrollto">Register</a>--}}
             </div>
         </div>
 

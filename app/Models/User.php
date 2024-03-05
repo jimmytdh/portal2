@@ -21,6 +21,7 @@ class User extends Authenticatable
         'fname',
         'mname',
         'lname',
+        'suffix',
         'username',
         'password',
         'designation',
