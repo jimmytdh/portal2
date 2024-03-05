@@ -32,7 +32,8 @@ class HomeController extends Controller
 
     public function register()
     {
-        return redirect('/');
+        $url = url('/');
+        return redirect($url);
         $designation = Designation::orderBy('description','asc')->get();
         $division = Division::orderBy('description','asc')->get();
         return view('register',compact('designation','division'));
